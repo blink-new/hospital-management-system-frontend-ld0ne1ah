@@ -7,6 +7,11 @@ import { Toaster } from './components/ui/sonner';
 import LoginPage from './pages/LoginPage';
 import DashboardPage from './pages/DashboardPage';
 import PatientsPage from './pages/PatientsPage';
+import AppointmentsPage from './pages/AppointmentsPage';
+import PharmacyPage from './pages/PharmacyPage';
+import LaboratoryPage from './pages/LaboratoryPage';
+import StaffPage from './pages/StaffPage';
+import FinancialPage from './pages/FinancialPage';
 
 // Layout
 import AppLayout from './components/layout/AppLayout';
@@ -40,10 +45,7 @@ const AppContent: React.FC = () => {
             path="appointments" 
             element={
               <ProtectedRoute allowedRoles={['admin', 'doctor', 'nurse', 'receptionist']}>
-                <div className="p-6">
-                  <h1 className="text-3xl font-bold">Appointments</h1>
-                  <p className="text-muted-foreground mt-2">Appointment scheduling coming soon...</p>
-                </div>
+                <AppointmentsPage />
               </ProtectedRoute>
             } 
           />
@@ -51,10 +53,7 @@ const AppContent: React.FC = () => {
             path="pharmacy" 
             element={
               <ProtectedRoute allowedRoles={['admin', 'pharmacist', 'doctor']}>
-                <div className="p-6">
-                  <h1 className="text-3xl font-bold">Pharmacy</h1>
-                  <p className="text-muted-foreground mt-2">Pharmacy management coming soon...</p>
-                </div>
+                <PharmacyPage />
               </ProtectedRoute>
             } 
           />
@@ -62,10 +61,7 @@ const AppContent: React.FC = () => {
             path="laboratory" 
             element={
               <ProtectedRoute allowedRoles={['admin', 'lab_technician', 'doctor']}>
-                <div className="p-6">
-                  <h1 className="text-3xl font-bold">Laboratory</h1>
-                  <p className="text-muted-foreground mt-2">Laboratory management coming soon...</p>
-                </div>
+                <LaboratoryPage />
               </ProtectedRoute>
             } 
           />
@@ -73,10 +69,7 @@ const AppContent: React.FC = () => {
             path="staff" 
             element={
               <ProtectedRoute allowedRoles={['admin']}>
-                <div className="p-6">
-                  <h1 className="text-3xl font-bold">Staff Management</h1>
-                  <p className="text-muted-foreground mt-2">Staff management coming soon...</p>
-                </div>
+                <StaffPage />
               </ProtectedRoute>
             } 
           />
@@ -84,10 +77,7 @@ const AppContent: React.FC = () => {
             path="financial" 
             element={
               <ProtectedRoute allowedRoles={['admin']}>
-                <div className="p-6">
-                  <h1 className="text-3xl font-bold">Financial Reports</h1>
-                  <p className="text-muted-foreground mt-2">Financial reporting coming soon...</p>
-                </div>
+                <FinancialPage />
               </ProtectedRoute>
             } 
           />

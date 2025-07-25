@@ -27,7 +27,8 @@ import {
   Settings,
   Heart,
   LogOut,
-  ChevronRight
+  ChevronRight,
+  Stethoscope
 } from 'lucide-react';
 import { useAuth } from '../../hooks/useAuth';
 import { navigationConfig } from '../../types/navigation';
@@ -42,6 +43,7 @@ const iconMap = {
   DollarSign,
   Bell,
   Settings,
+  Stethoscope,
 };
 
 const AppSidebar: React.FC = () => {
